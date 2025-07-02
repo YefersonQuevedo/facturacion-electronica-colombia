@@ -8,7 +8,7 @@ Actualmente se encuentra funcionando en ambiente de **habilitación**.
 👉 [Facturación electrónica DIAN COLOMBIA software propio - API GRATIS](https://youtu.be/EaDoYikq-DI?si=W-lIRWI1gwBewll2)
 
 📞 ¿Necesitas ayuda técnica o soporte?  
-Puedes contactarme por WhatsApp: **+57 300 812 0524**
+Puedes contactarme por WhatsApp autor original: **+57 300 812 0524**
 
 ---
 
@@ -20,39 +20,31 @@ Instala **Python 3.10** o **3.11** desde el sitio oficial:
 ✅ Marca la opción **“Add Python to PATH”** durante la instalación.
 
 ---
-
 ### 2. 🧰 Clona el repositorio y accede al proyecto
-```bash
+```
 git clone https://github.com/Crispancho93/facturacion-electronica-colombia.git
 cd facturacion-electronica-colombia
-3. 🧪 Crea y activa un entorno virtual
+```
+### 3. 🧪 Crea y activa un entorno virtual
 En Windows:
-bash
-Copiar
-Editar
+```
 py -3.10 -m venv venv310     # o py -3.11 -m venv venv311
 venv310\Scripts\activate
 En Linux/macOS:
-bash
-Copiar
-Editar
 python3.10 -m venv venv310   # o python3.11 -m venv venv311
 source venv310/bin/activate
-4. 📦 Instala las dependencias
-bash
-Copiar
-Editar
+```
+### 4. 📦 Instala las dependencias
+```
 pip install -r requirements.txt
 ✅ Esto instalará correctamente lxml==4.8.0 y demás paquetes compatibles con Python 3.10 o 3.11 en Windows.
-
-5. 🚀 Ejecuta el servidor de desarrollo
-bash
-Copiar
-Editar
+```
+### 5. 🚀 Ejecuta el servidor de desarrollo
+```
 uvicorn app:app --reload
 Luego abre tu navegador en:
 👉 http://localhost:8000/docs
-
+```
 Ahí encontrarás la documentación interactiva de la API.
 
 🧪 Probar con Postman
@@ -67,9 +59,7 @@ Body: selecciona raw → application/json
 Contenido: pega el JSON correspondiente a tu factura
 
 📁 Estructura del Proyecto
-csharp
-Copiar
-Editar
+```
 facturacion-electronica-colombia/
 │
 ├── app/                    # Lógica principal del proyecto
@@ -84,7 +74,7 @@ facturacion-electronica-colombia/
 └── README.md               # Documentación
 📌 Pendiente por validar
  Validar el campo IndustryClasificationCode (Código de actividad económica registrado en el RUT)
-
+```
 🤝 Contribución
 ¿Quieres colaborar? ¡Genial! Sigue estos pasos:
 
@@ -92,21 +82,12 @@ Haz un fork del repositorio.
 
 Crea una rama nueva:
 
-bash
-Copiar
-Editar
 git checkout -b feature/nueva-caracteristica
 Realiza tus cambios y haz commit:
 
-bash
-Copiar
-Editar
 git commit -am "Agrega nueva característica"
 Haz push a tu rama:
 
-bash
-Copiar
-Editar
 git push origin feature/nueva-caracteristica
 Abre un Pull Request 🚀
 
