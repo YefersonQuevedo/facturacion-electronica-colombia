@@ -1,71 +1,115 @@
-# Proyecto facturacion-electronica-colombia
+# 🧾 Proyecto: Facturación Electrónica Colombia 🇨🇴
 
-Este proyecto facturacion-electronica-colombia es una aplicación web desarrollada en Python utilizando el framework FastAPI. Proporciona una API para enviar facturas, notas crédito y prontamente notas débito a la DIAN en Colombia.
+Este proyecto es una **API web desarrollada en Python con FastAPI**, diseñada para enviar **facturas electrónicas, notas crédito** y próximamente **notas débito** a la DIAN en Colombia.
 
-Actualmente está operando en ambiente de habilitación. Para más detalles acerca de cómo correr y depurar el proyecto, puedes consultar este video de YouTube:
+Actualmente se encuentra funcionando en ambiente de **habilitación**.
 
-[Facturación electrónica DIAN COLOMBIA software propio - API GRATIS](https://youtu.be/EaDoYikq-DI?si=W-lIRWI1gwBewll2)
+🎥 Video explicativo en YouTube:  
+👉 [Facturación electrónica DIAN COLOMBIA software propio - API GRATIS](https://youtu.be/EaDoYikq-DI?si=W-lIRWI1gwBewll2)
 
-En caso tal de necesitar ayuda me pueden contactar al WhatsApp +57 300 812 0524
-
----
-
-## Instalación
-
-1. Clona el repositorio desde GitHub:
-
-    ```bash
-    git clone https://github.com/Crispancho93/facturacion-electronica-colombia.git
-    ```
-
-2. Accede al directorio del proyecto:
-
-    ```bash
-    cd facturacion-electronica-colombia
-    ```
-
-3. Crea un entorno virtual e instala las dependencias:
-
-    ```bash
-    python -m venv venv
-    source venv/bin/activate    # Linux / macOS
-    .\venv\Scripts\activate     # Windows
-    pip install -r requirements.txt
-    ```
-
-## Uso
-
-1. Ejecuta el servidor de desarrollo:
-
-    ```bash
-    uvicorn app:app --reload
-    ```
-
-2. Accede a la documentación de la API en tu navegador:
-
-    ```
-    http://localhost:8000/docs
-    ```
-
-3. Realiza solicitudes HTTP a la API utilizando herramientas como cURL o Postman.
-
-## Contribución
-
-¡Agradecemos las contribuciones! Si deseas contribuir al proyecto, sigue estos pasos:
-
-1. Fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`).
-3. Realiza tus cambios y commitealos (`git commit -am 'Agrega nueva característica'`).
-4. Sube los cambios a tu repositorio (`git push origin feature/nueva-caracteristica`).
-5. Crea un Pull Request.
-
-## Estructura del Proyecto
-
-## Pendiente por validar
-1. Validar campo IndustryClasificationCode - Código de actividad que registra en el RUT
+📞 ¿Necesitas ayuda técnica o soporte?  
+Puedes contactarme por WhatsApp: **+57 300 812 0524**
 
 ---
 
-## Licencia
+## 📦 Instalación
 
-Este proyecto está licenciado bajo la misma licencia de código abierto que el kernel de Linux: [Licencia GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html). Esto significa que puedes usar, modificar y distribuir el software bajo los términos de la licencia.
+### 1. 🔽 Requisitos previos  
+Instala **Python 3.10** o **3.11** desde el sitio oficial:  
+👉 [https://www.python.org/downloads/release/python-3100/](https://www.python.org/downloads/release/python-3100/)  
+✅ Marca la opción **“Add Python to PATH”** durante la instalación.
+
+---
+
+### 2. 🧰 Clona el repositorio y accede al proyecto
+```bash
+git clone https://github.com/Crispancho93/facturacion-electronica-colombia.git
+cd facturacion-electronica-colombia
+3. 🧪 Crea y activa un entorno virtual
+En Windows:
+bash
+Copiar
+Editar
+py -3.10 -m venv venv310     # o py -3.11 -m venv venv311
+venv310\Scripts\activate
+En Linux/macOS:
+bash
+Copiar
+Editar
+python3.10 -m venv venv310   # o python3.11 -m venv venv311
+source venv310/bin/activate
+4. 📦 Instala las dependencias
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+✅ Esto instalará correctamente lxml==4.8.0 y demás paquetes compatibles con Python 3.10 o 3.11 en Windows.
+
+5. 🚀 Ejecuta el servidor de desarrollo
+bash
+Copiar
+Editar
+uvicorn app:app --reload
+Luego abre tu navegador en:
+👉 http://localhost:8000/docs
+
+Ahí encontrarás la documentación interactiva de la API.
+
+🧪 Probar con Postman
+Puedes enviar facturas fácilmente desde Postman:
+
+Método: POST
+
+URL: http://127.0.0.1:8000/api/invoice/create_invoice
+
+Body: selecciona raw → application/json
+
+Contenido: pega el JSON correspondiente a tu factura
+
+📁 Estructura del Proyecto
+csharp
+Copiar
+Editar
+facturacion-electronica-colombia/
+│
+├── app/                    # Lógica principal del proyecto
+│   ├── routes/             # Endpoints de la API
+│   ├── services/           # Lógica de negocio
+│   └── models/             # Esquemas y validaciones
+│
+├── static/                 # Archivos estáticos (si aplica)
+├── templates/              # Plantillas HTML (si aplica)
+├── main.py                 # Punto de entrada alternativo
+├── requirements.txt        # Dependencias del proyecto
+└── README.md               # Documentación
+📌 Pendiente por validar
+ Validar el campo IndustryClasificationCode (Código de actividad económica registrado en el RUT)
+
+🤝 Contribución
+¿Quieres colaborar? ¡Genial! Sigue estos pasos:
+
+Haz un fork del repositorio.
+
+Crea una rama nueva:
+
+bash
+Copiar
+Editar
+git checkout -b feature/nueva-caracteristica
+Realiza tus cambios y haz commit:
+
+bash
+Copiar
+Editar
+git commit -am "Agrega nueva característica"
+Haz push a tu rama:
+
+bash
+Copiar
+Editar
+git push origin feature/nueva-caracteristica
+Abre un Pull Request 🚀
+
+⚖️ Licencia
+Este proyecto está licenciado bajo la Licencia GPLv2, igual que el kernel de Linux.
+Puedes usar, modificar y distribuir el software respetando los términos de dicha licencia.

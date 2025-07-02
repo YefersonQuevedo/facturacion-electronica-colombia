@@ -1,0 +1,59 @@
+🧪 PASOS RECOMENDADOS PARA CONFIGURAR EL ENTORNO
+1. 🔽 Instalar Python 3.10 o 3.11
+Descarga la versión deseada desde:
+👉 https://www.python.org/downloads/release/python-3100/
+
+📌 Importante: Durante la instalación, marca la casilla “Add Python to PATH”.
+
+2. 🧰 Crear un entorno virtual
+Abre una terminal y ejecuta uno de los siguientes comandos según tu versión:
+
+Para Python 3.10:
+
+bash
+Copiar
+Editar
+py -3.10 -m venv venv310
+Para Python 3.11:
+
+bash
+Copiar
+Editar
+py -3.11 -m venv venv311
+3. ✅ Activar el entorno virtual
+Activa el entorno ejecutando:
+
+bash
+Copiar
+Editar
+venv310\Scripts\activate
+🔁 Luego puedes ejecutar tu aplicación con:
+
+bash
+Copiar
+Editar
+uvicorn app:app --reload
+Verás algo como esto al inicio de la línea: (venv310), lo cual indica que estás dentro del entorno virtual.
+
+4. 📦 Instalar los requisitos
+Dentro del entorno activado, instala las dependencias con:
+
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+✅ Esto evitará errores con paquetes como lxml==4.8.0, ya que sí existen versiones compatibles (wheel) para Python 3.10 y 3.11 en Windows.
+
+5. 📬 Probar en Postman
+Para probar tu endpoint, utiliza esta URL en Postman:
+
+ruby
+Copiar
+Editar
+POST http://127.0.0.1:8000/api/invoice/create_invoice
+En la pestaña Body, selecciona raw
+
+Tipo: application/json
+
+Pega ahí tu JSON para enviar la solicitud
+

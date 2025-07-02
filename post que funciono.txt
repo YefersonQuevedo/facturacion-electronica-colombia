@@ -1,0 +1,93 @@
+{
+  "Control": {
+    "StartDate": "2019-01-19",
+    "EndDate": "2030-01-19",
+    "InvoiceAuthorization": "18760000001",
+    "Pin": "54900",
+    "Prefix": "SETP",
+    "From": "990000000",
+    "To": "995000000",
+    "TestID": "00da3607-da91-444c-bd00-a6b1ea9e42b1",
+    "ProviderID": "1069178680",
+    "SoftwareID": "9348759f-a0e7-4ee3-a89a-ae85a2dec7b0",
+    "ProfileExecutionID": "2",
+    "TechnicalKey": "fc8eac422eba16e22ffd8c6f94b3f40a6e38162c"
+  },
+  "ID": "FVSETP990000001",
+  "IssueDate": "2025-06-23",
+  "IssueTime": "15:30:00-05:00",
+  "Payment": {
+    "PaymentID": "1",
+    "PaymentCode": "1"
+  },
+  "Amounts": {
+    "LineExtensionAmount": "10000.00",
+    "TaxExclusiveAmount": "10000.00",
+    "TaxInclusiveAmount": "11900.00",
+    "PrepaidAmount": "0.00",
+    "PayableAmount": "11900.00",
+    "TaxTotals": [
+      {
+        "TaxAmount": "1900.00",
+        "TaxSubtotal": [
+          {
+            "TaxAmount": "1900.00",
+            "TaxableAmount": "10000.00",
+            "TaxPercent": "19.00",
+            "TaxSchemeID": "01",
+            "TaxSchemeName": "IVA"
+          }
+        ]
+      }
+    ]
+  },
+  "Lines": [
+    {
+      "ID": "1",
+      "Quantity": "1",
+      "LineExtensionAmount": "10000.00",
+      "TaxAmount": "1900.00",
+      "TaxableAmount": "10000.00",
+      "TaxSubtotalAmount": "1900.00",
+      "TaxPercent": "19.00",
+      "TaxSchemeID": "01",
+      "TaxSchemeName": "IVA",
+      "Description": "Producto de prueba",
+      "SellersItemID": "PROD001",
+      "AdditionalItemID": "PROD001ALT",
+      "PriceAmount": "10000.00",
+      "BaseQuantity": "1"
+    }
+  ],
+  "Company": {
+    "AdditionalAccountID": "1",
+    "PartyName": "yeferson andres quevedo gutierrez",
+    "CompanyID": "1069178680",
+    "DocumentType": "13",
+    "VerificationDigit": "05",
+    "TaxLevelCode": "R-99-PN",
+    "Address": {
+      "AddressID": "11001",
+      "CountrySubentityCode": "11",
+      "CityName": "Bogotá",
+      "CountrySubentity": "Cundinamarca",
+      "AddressLine": "CL 123 #45-67"
+    }
+  },
+  "Customer": {
+    "ID": "1020420270",
+    "DocumentType": "13",
+    "AdditionalAccountID": "2",
+    "PartyName": "CLIENTE PRUEBA",
+    "Telephone": "3001234567",
+    "Email": "cliente@prueba.com",
+    "TaxLevelCode": "R-99-PN",
+    "Address": {
+      "AddressID": "11001",
+      "CountrySubentityCode": "11",
+      "CityName": "Bogotá",
+      "CountrySubentity": "Cundinamarca",
+      "AddressLine": "CLl 24b 74a 16"
+    }
+  }
+}
