@@ -7,11 +7,11 @@
     "Prefix": "SETP",
     "From": "990000000",
     "To": "995000000",
-    "TestID": "00da3607-da91-444c-bd00-a6b1ea9e42b1",
+    "TestID": "",
     "ProviderID": "1069178680",
-    "SoftwareID": "9348759f-a0e7-4ee3-a89a-ae85a2dec7b0",
+    "SoftwareID": "",
     "ProfileExecutionID": "2",
-    "TechnicalKey": "fc8eac422eba16e22ffd8c6f94b3f40a6e38162c"
+    "TechnicalKey": ""
   },
   "ID": "FVSETP990000001",
   "IssueDate": "2025-06-23",
@@ -61,8 +61,8 @@
   ],
   "Company": {
     "AdditionalAccountID": "1",
-    "PartyName": "yeferson andres quevedo gutierrez",
-    "CompanyID": "1069178680",
+    "PartyName": "",
+    "CompanyID": "",
     "DocumentType": "13",
     "VerificationDigit": "05",
     "TaxLevelCode": "R-99-PN",
