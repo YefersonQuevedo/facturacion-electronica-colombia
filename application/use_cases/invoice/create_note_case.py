@@ -58,14 +58,26 @@ class CreateNoteCase:
         zip_invoice = generic.zip_document(signed_invoice, f'{self.xml_name}.xml')
 
         # Enviar la Factura
-        result = self.soap.send_xml(zip_invoice)
+        try:
+            response = self.soap.send_xml(zip_invoice)
+            is_valid, messages = generic.extract_errors_invoice(response.text)
 
+            if is_valid == 'false':
+                print(f"Error al enviar la nota. XML enviado: {self.xml_name}")
+                print(f"Error al enviar la nota. Respuesta XML: {response.text}")
+                raise Exception(messages)
+            
+        except Exception as e:
+            print(f"Error al enviar la nota. XML enviado: {self.xml_name}")
+            print(f"Error al enviar la nota. Respuesta XML: {e}")
+            raise Exception(e)
+        
         # Guardar .zip en un segundo plano
         args = (zip_invoice, f'{self.xml_full_path}.zip')
         thread = threading.Thread(target=generic.write_file_from_base64, args=args)
         thread.start()
 
-        return result
+        return messages
     
     def _set_customer(self):
         self.xml.Customer.AdditionalAccountID = self.credit_note.Customer.AdditionalAccountID
