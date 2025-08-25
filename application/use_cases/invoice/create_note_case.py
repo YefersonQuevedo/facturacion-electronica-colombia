@@ -174,3 +174,5 @@ class CreateNoteCase:
         self.xml.Control.ProfileExecutionID = control.ProfileExecutionID
 
         self.xml.Control.VerificationDigit = self.credit_note.Company.VerificationDigit
+
+    
